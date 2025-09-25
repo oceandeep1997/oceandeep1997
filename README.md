@@ -1,16 +1,26 @@
-## Hi there 👋
+# Hi there 👋, I'm Zhexuan Qiu
 
-<!--
-**oceandeep1997/oceandeep1997** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<!-- Snake animation (we'll generate these files in step 4) -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-snake.svg" />
+  <img alt="github-snake" src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-snake.svg" />
+</picture>
 
-Here are some ideas to get you started:
+Here is where I share some ramblings about work, tech, and fun.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+I'm a Data Scientist @OAG, working on forecasting models. 
+I'm based in Barcelona, Spain 🌍
+
+
+Connect with me:
+[LinkedIn](https://www.linkedin.com/in/zhexuan-qiu-91b0b6159/) 
+I'm currently working with Data Engineering projects  ⚙️
+
+
+
+---
+
+⚡ GitHub Stats
+
+[![My GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
