@@ -12,6 +12,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Check out first: the snake step writes dist/ as root, which checkout cannot clean.
+      - uses: actions/checkout@v4
+
       - name: generate-snake-game-from-github-contribution-grid
         uses: Platane/snk@v3.3.0
         with:
@@ -19,8 +22,6 @@ jobs:
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
-
-      - uses: actions/checkout@v4
 
       # Replaces github-readme-stats.vercel.app, which stopped serving (503 DEPLOYMENT_PAUSED).
       - name: Generate GitHub stats card
