@@ -12,16 +12,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Check out first: the snake step writes dist/ as root, which checkout cannot clean.
+      # Checkout and the stats card run before the snake step, which leaves dist/ owned by root.
       - uses: actions/checkout@v4
-
-      - name: generate-snake-game-from-github-contribution-grid
-        uses: Platane/snk@v3.3.0
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
 
       # Replaces github-readme-stats.vercel.app, which stopped serving (503 DEPLOYMENT_PAUSED).
       - name: Generate GitHub stats card
@@ -30,6 +22,14 @@ jobs:
         run: |
           python3 scripts/stats_card.py ${{ github.repository_owner }} dist/github-stats.svg
           python3 scripts/stats_card.py ${{ github.repository_owner }} dist/github-stats-dark.svg --dark
+
+      - name: generate-snake-game-from-github-contribution-grid
+        uses: Platane/snk@v3.3.0
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
 
       - name: Publish artifacts to 'output' branch
         uses: crazy-max/ghaction-github-pages@v4
