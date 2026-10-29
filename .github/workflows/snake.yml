@@ -1,4 +1,4 @@
-name: Generate contribution snake
+name: Generate contribution snake and stats card
 
 on:
   schedule:
@@ -19,6 +19,16 @@ jobs:
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
+
+      - uses: actions/checkout@v4
+
+      # Replaces github-readme-stats.vercel.app, which stopped serving (503 DEPLOYMENT_PAUSED).
+      - name: Generate GitHub stats card
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/stats_card.py ${{ github.repository_owner }} dist/github-stats.svg
+          python3 scripts/stats_card.py ${{ github.repository_owner }} dist/github-stats-dark.svg --dark
 
       - name: Publish artifacts to 'output' branch
         uses: crazy-max/ghaction-github-pages@v4

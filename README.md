@@ -23,4 +23,9 @@ I'm currently working with Data Engineering projects  ⚙️
 
 ⚡ GitHub Stats
 
-[![My GitHub Stats](https://github-readme-stats.vercel.app/api?username=oceandeep1997&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
+<!-- Stats card (generated daily by the same workflow as the snake) -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oceandeep1997/oceandeep1997/output/github-stats-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/oceandeep1997/oceandeep1997/output/github-stats.svg" />
+  <img alt="My GitHub Stats" src="https://raw.githubusercontent.com/oceandeep1997/oceandeep1997/output/github-stats.svg" />
+</picture>
